@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700");
+.viewer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.viewer img:first-child {
+  position: relative;
+}
+.viewer img.active {
+  opacity: 1;
+}
+.viewer::before {
+  padding-bottom: 56.25%;
+  float: left;
+}
+.viewer::before, .viewer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  background-color: #ECEFF1;
+  padding: 1rem;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+article {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100vmin;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px rgba(120, 144, 156, 0.3);
+}
+article h2 {
+  font-size: 5vmin;
+  font-weight: 500;
+  line-height: 0;
+  matgin: 0;
+  color: orangered;
+}
+article h2 span {
+  font-weight: 400;
+  font-size: 12vmin;
+  bottom: -3.2vmin;
+  margin-right: -4vmin;
+}
+article p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #78909C;
+}
+article figure {
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+article figcaption {
+  font-size: 5.5vmin;
+  bottom: calc(8vmin);
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  color: #78909C;
+  position: absolute;
+  bottom: -1rem;
+}
+article figcaption span {
+  font-weight: 700;
+}
+article svg {
+  display: bloc;
+  position: absolute;
+  bottom: -3vmin;
+  right: 0;
+  width: 16vmin;
+  height: 16vmin;
+  fill: #78909C;
+  opacity: 0.2;
+  transform: scaleX(-1);
+}
+article footer p {
+  position: absolute;
+  right: 0;
+  bottom: -2.2rem;
+}
+article footer p a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  position: relative;
+  z-index: 0;
+  background-repeat: no-repeat;
+}
+
+body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
